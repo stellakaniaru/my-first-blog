@@ -1,27 +1,95 @@
-h1 a {
-color: red;
-font-family: 'Lobster';
+.main-page {
+	width: 80%;
+	min-width: 600px;
+	margin: auto;
+}
+
+.page-banner {
+	
+	margin-top: 0;
+	padding: 20px 20px 20px 40px;
+	color: blue;
+	text-align: center;
+	font-family: sans-serif;
+	width: 100%;
+
+}
+.nav {
+	/*background-color: #FFF8DC;*/
+	background-color: yellow;
+	width: 100%;
+	float: left;
+}
+.nav  li {
+	display: inline;
+	padding-right: 20px;
+	
+}
+
+.nav li a {
+	color: black;
+	text-decoration: none;
+}
+
+
+.nav li a:hover {
+	text-decoration: underline;
+	color: purple;
 }
 
 body {
+	background-image: url(../img/glow.jpg);
+	
+}
+
+.b1 {
+	width: 180px;
+	height: 200px;
+	padding-left: 15px;
+	align-content: center;
+}
+/*.title{
+	font-family: 'Lobster', cursive;
+	color: blue;
+}
+*/
+.content-container {
 padding-left: 15px;
+color: black;
+background-color: blue;
+width: 80%;
+float: left;
+
+}
+
+aside {
+	float: left;
+	background-color: red;
+	width: 16%;
 }
 
 .page-header {
-background-color: #ff9400;
+background-color: blue;
+color: white;
 margin-top: 0;
 padding: 20px 20px 20px 40px;
+height: 60px;
+width: 80%;
+margin: auto;
 }
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
 color: #ffffff;
 font-size: 36pt;
 text-decoration: none;
 }
+
+
 .content {
 margin-left: 40px;
 }
 h1, h2, h3, h4 {
-font-family: 'Lobster', cursive;
+	font-family: 'Lobster', cursive;
+	color: blue;
 }
 .date {
 color: #828282;
@@ -44,3 +112,4 @@ margin-bottom: 70px;
 .post h1 a, .post h1 a:visited {
 color: #000000;
 }
+

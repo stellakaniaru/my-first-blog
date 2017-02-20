@@ -1,5 +1,8 @@
 {% extends 'blogz/base.html' %}
 
+{% block title %}
+{{ post.title }}
+{% endblock %}
 
 {% block content %}
 <div class="post">
@@ -12,6 +15,8 @@
 <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a
 >
 <h1>{{ post.title }}</h1>
+
+<!-- <img src="../static/img/book.jpeg"> -->
 <p>{{ post.text|linebreaksbr }}</p>
 </div>
 {% endblock %}

@@ -1,5 +1,9 @@
 {% extends 'blogz/base.html' %}
 
+{% block title %}
+Edit
+{% endblock %}
+
 {% block content %}
 <h1>New post</h1>
 <form method="POST" class="post-form">{% csrf_token %}

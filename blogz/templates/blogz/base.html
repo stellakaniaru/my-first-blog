@@ -1,27 +1,64 @@
 {% load staticfiles %}
+{% load static %}
+
+
 <html>
 <head>
-<title>Django Girls blog</title>
+<title>{% block title %}{% endblock %}</title>
 
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-<link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<!-- <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+ -->
 <link rel="stylesheet" href="{% static 'css/blogz.css' %}">
 
 </head>
 <body>
-<div class="page-header">
-<a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
-<h1><a href="/">Django Girls Blog</a></h1>
 
-</div>
-<div class="content container">
-<div class="row">
-<div class="col-md-8">
+<div class="main-page">
+
+	<div class="page-banner">
+		<h1>SCORPIO LOUNGE</h1>
+		<p>So many books...</p>
+		<p>... so little time.</p>
+		<p> :) </p>
+	</div>
+
+	<div class="nav">
+		<ul >
+		<li><a href="/">Home</a></li>
+		<li><a href="#">Portfolio</a></li>
+		<li><a href="#">Contacts</a></li>
+		<li><a href="#">Gallery</a></li>
+	</ul>
+	</div>
+
+
+
+<!-- <div class="page-header">
+<a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a> -->
+<!-- <h1><a href="/">Django Girls Blog</a></h1> -->
+<!-- <div>
+	<img src="../static/img/book.jpeg">
+</div> -->
+
+
+<div class="content-container">
+<!-- <div class="row">
+<div class="col-md-8"> -->
 {% block content %}
 {% endblock %}
 </div>
 </div>
+</div>
+
+<aside>
+	
+		<img src="../../static/img/book.jpeg" class="b1">
+		<!-- <li><a href="">Book</a></li>
+		<li><a href="">Book</a></li> -->
+	
+</aside>
 </div>
 
 </body>

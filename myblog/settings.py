@@ -37,7 +37,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-   ' url(r'^admin/doc/', include('django.contrib.admindocs.urls'))'
     'blogz',
 ]
 

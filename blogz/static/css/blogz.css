@@ -4,6 +4,9 @@
 	margin: auto;
 }
 
+header {
+	background-image: url(../img/index.jpg);
+}
 .page-banner {
 	
 	margin-top: 0;
@@ -11,12 +14,13 @@
 	color: blue;
 	text-align: center;
 	font-family: sans-serif;
-	width: 100%;
+	/*width: 100%;*/
+	/*background-image: url(../img/glow.jpg);*/
 
 }
 .nav {
 	/*background-color: #FFF8DC;*/
-	background-color: yellow;
+	/*background-color: yellow;*/
 	width: 100%;
 	float: left;
 }
@@ -27,20 +31,20 @@
 }
 
 .nav li a {
-	color: black;
+	color: white;
 	text-decoration: none;
 }
 
 
 .nav li a:hover {
 	text-decoration: underline;
-	color: purple;
+	color: red;
 }
 
-body {
+/*body {
 	background-image: url(../img/glow.jpg);
 	
-}
+}*/
 
 .b1 {
 	width: 180px;
@@ -56,16 +60,24 @@ body {
 .content-container {
 padding-left: 15px;
 color: black;
-background-color: blue;
-width: 80%;
+/*background-color: blue;
+*/width: 80%;
 float: left;
 
 }
 
+.content-container h1 {
+	color: red;
+}
+
 aside {
 	float: left;
-	background-color: red;
+	/*background-color: red;*/
 	width: 16%;
+}
+
+aside h3 {
+	color: blue;
 }
 
 .page-header {
@@ -89,7 +101,7 @@ margin-left: 40px;
 }
 h1, h2, h3, h4 {
 	font-family: 'Lobster', cursive;
-	color: blue;
+	color: white;
 }
 .date {
 color: #828282;
@@ -110,6 +122,6 @@ margin-right: 20px;
 margin-bottom: 70px;
 }
 .post h1 a, .post h1 a:visited {
-color: #000000;
+color: blue;
 }
 

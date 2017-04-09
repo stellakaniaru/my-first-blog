@@ -1,13 +1,14 @@
 .main-page {
 	width: 80%;
-	min-width: 600px;
+	min-width: 400px;
 	margin: auto;
 }
 
-header {
+/*header {
 	background-image: url(../img/index.jpg);
-}
-.page-banner {
+	
+}*/
+/*.page-banner {
 	
 	margin-top: 0;
 	padding: 20px 20px 20px 40px;
@@ -17,10 +18,11 @@ header {
 	/*width: 100%;*/
 	/*background-image: url(../img/glow.jpg);*/
 
-}
+
 .nav {
 	/*background-color: #FFF8DC;*/
 	/*background-color: yellow;*/
+	align-items: right;
 	width: 100%;
 	float: left;
 }
@@ -31,6 +33,7 @@ header {
 }
 
 .nav li a {
+	
 	color: white;
 	text-decoration: none;
 }
@@ -61,7 +64,7 @@ header {
 padding-left: 15px;
 color: black;
 /*background-color: blue;
-*/width: 80%;
+*/width: 70%;
 float: left;
 
 }
@@ -70,10 +73,15 @@ float: left;
 	color: red;
 }
 
+.title: hover{
+	text-decoration: none;
+	color: black;
+}
+
 aside {
 	float: left;
 	/*background-color: red;*/
-	width: 16%;
+	width: 20%;
 }
 
 aside h3 {
@@ -81,6 +89,12 @@ aside h3 {
 }
 
 .page-header {
+	/*background-color: blue;
+	margin-top: 0;
+	padding: 20px 20px 20px 40px;
+	color: blue;
+	text-align: center;
+	font-family: sans-serif;*/
 background-color: blue;
 color: white;
 margin-top: 0;
@@ -125,3 +139,6 @@ margin-bottom: 70px;
 color: blue;
 }
 
+.comment {
+    margin: 20px 0px 20px 20px;
+}

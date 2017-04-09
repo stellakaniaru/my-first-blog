@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 """
 
 import os
+import socket
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -23,7 +24,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '9bh!=61*sxn%4x!%iu-4y+hpam!#j6n-4nvl30#@($n+2$ti+-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+if socket.gethostname() == '<a href = "http://pythonanywhere.com" target = "_blank">pythonanywhere.com</a>':
+    DEBUG = False
+else:
+    DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'stellakaniaru.pythonanywhere.com']
 
@@ -120,4 +124,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+LOGIN_REDIRECT_URL = '/'
+
+# EMAIL_HOST = 'smtp server'
+# EMAIL_HOST_USER = 'Login credential for the smtp server.'
+# EMAIL_HOST_PASSWORD = 'Password credential for the smtp server.'
+# EMAIL_PORT = 'smtp server port.'
+# EMAIL_USE_TLS or _SSL = 'True if secure connection'
 

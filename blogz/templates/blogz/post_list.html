@@ -5,6 +5,8 @@ Home
 {% endblock %}
 
 {% block content %}
+
+
 {% for post in posts %}
 <div class="post">
 <div class="date">
@@ -13,6 +15,29 @@ Home
 
 <h1><a href="{% url 'post_detail' pk=post.pk %}" class="title">{{ post.title }}</a></h1>
 <p>{{ post.text|linebreaksbr }}</p>
+<a href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.approved_comments.count }}</a>
 </div>
+
 {% endfor %}
+
 {% endblock %}
+
+{% block body %}
+<aside>
+		
+		<h3>My To Read List</h3>
+		<a href=""><img src="../../static/img/accident.jpg" class="b1"></a>
+		<br>
+		<a href=""><img src="../../static/img/allegiant.jpg" class="b1"></a>
+		<br>
+		<a href=""><img src="../../static/img/king.jpg" class="b1"></a>
+		<br>
+		<a href=""><img src="../../static/img/pi.jpg" class="b1"></a>
+		<br>
+		<a href=""><img src="../../static/img/thrones.jpg" class="b1"></a>
+		<br>
+		
+</aside>
+
+{% endblock %}
+

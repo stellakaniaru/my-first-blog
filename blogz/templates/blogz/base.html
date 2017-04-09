@@ -13,26 +13,52 @@
 <link rel="stylesheet" href="{% static 'css/blogz.css' %}">
 
 </head>
+
+
 <header>
-	<div class="page-banner">
-		<h1>SCORPIO LOUNGE</h1>
+	<div class="page-header">
+
+		{% if user.is_authenticated %}
+		<a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+		<a href="{% url 'post_draft_list' %}" class="top-menu"><span class="glyphicon glyphicon-edit"></span></a>
+		<p class="top-menu"><small>(<a href="{% url 'logout' %}">Log out</a>)</small></p>
+		<h1><p align="left">Hello {{ user.username }}!</p></h1>
+		
+
+		{% else %}
+        <a href="{% url 'login' %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span></a>
+		{% endif %}
+
+		
+		<h1 align="center">SCORPIO LOUNGE</h1>
 		<p>So many books...</p>
 		<p>... so little time.</p>
 		<p> :) </p>
-
+	<!-- 	<p><a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a></p> -->
+		
+		
 		<div class="nav">
 		<ul >
 		<li><a href="/">Home</a></li>
-		<li><a href="#">Portfolio</a></li>
-		<li><a href="#">Contacts</a></li>
+		<li><a href="">Portfolio</a></li>
+		<li><a href="/contacts">Contacts</a></li>
 		<li><a href="#">Gallery</a></li>
 	</ul>
 	</div>
+
+
 	</div>
 </header>
+
+<!-- <div class="page-header">
+</div> -->
 <body>
 
 <div class="main-page">
+<!-- {% if user.is_authenticated %}
+	<h1><p style="color: black" align="left">Hello {{ user.username }} :)</p></h1>
+{% endif %} -->
+
 
 	<!-- <div class="nav">
 		<ul >
@@ -43,40 +69,27 @@
 	</ul>
 	</div> -->
 
+<!-- <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus">new</span></a> -->
 
 
-<!-- <div class="page-header">
-<a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a> -->
+
 <!-- <h1><a href="/">Django Girls Blog</a></h1> -->
 <!-- <div>
-	<img src="../static/img/book.jpeg">
-</div> -->
-
+	<img src="../static/img/book.jpeg"> -->
 
 <div class="content-container">
 <!-- <div class="row">
 <div class="col-md-8"> -->
+<!-- <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus">new</span></a> -->
+<!-- <p>new</p> -->
 {% block content %}
 {% endblock %}
 </div>
 </div>
 </div>
 
-<aside>
-		
-		<h3>My To Read List</h3>
-		<a href=""><img src="../../static/img/accident.jpg" class="b1"></a>
-		<br>
-		<a href=""><img src="../../static/img/allegiant.jpg" class="b1"></a>
-		<br>
-		<a href=""><img src="../../static/img/king.jpg" class="b1"></a>
-		<br>
-		<a href=""><img src="../../static/img/pi.jpg" class="b1"></a>
-		<br>
-		<a href=""><img src="../../static/img/thrones.jpg" class="b1"></a>
-		<br>
-		
-</aside>
+{% block body %}
+{% endblock %}
 </div>
 
 </body>
